@@ -1,0 +1,6 @@
+localhost ansible_connection=local ansible_python_interpreter=/usr/local/bin/python
+
+[ec2_instances]
+jenkins image="ami-194cdc76"  tags="{ name': 'jenkins' }" group_id='sg-07bb906d'
+test    image="ami-194cdc76"  tags="{ 'name': 'test' }"   group_id='sg-c61e13ac'
+deploy  image="ami-194cdc76"  tags="{ 'name': 'deploy' }" group_id='sg-c61e13ac'
